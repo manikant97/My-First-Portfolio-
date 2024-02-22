@@ -108,6 +108,7 @@ background:#882739 ;
     }
 }
 
+
 @media(max-width: 600px) {
     .row {
         padding: 0 var(--gutter-normal);
