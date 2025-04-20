@@ -429,10 +429,41 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
-.header__text {
+.header__text-box {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    margin: 0 auto;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.header__text {
+    flex: 1;
+    text-align: left;
+}
+
+.header__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--white-1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .header__text p {
@@ -440,6 +471,23 @@ body:not(.user-is-tabbing) a:focus {
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
     font-size: var(--font-size-medium);
+}
+
+@media(max-width: 900px) {
+    .header__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .header__text {
+        text-align: center;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -520,6 +568,45 @@ body:not(.user-is-tabbing) a:focus {
         height: 4rem;
     }
 }
+
+/* --------------------------------------- */
+/* ----- Technical Skills ----- */
+/* --------------------------------------- */
+
+.tech__list {
+    margin-top: 3rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.tech {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2.5rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tech:hover {
+    transform: translateY(-5px);
+}
+
+.tech-name {
+    color: var(--white-1);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tech-description {
+    color: var(--white-1);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
 /* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
